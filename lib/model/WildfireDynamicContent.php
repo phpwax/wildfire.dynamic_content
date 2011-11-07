@@ -8,6 +8,11 @@ class WildfireDynamicContent extends WildfireContent{
     WaxEvent::run("wildfire_dynamic_content.setup", $this);
   }
   
+  public function scope($scope){
+    $this->asked_for_scope = $scope;
+    WaxEvent::run("wildfire_dynamic_content.scope", $this);
+    parent::scope($scope);
+  }
   
   public function before_save(){
     parent::before_save();
