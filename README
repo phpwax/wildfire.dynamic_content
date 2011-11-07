@@ -1,0 +1,3 @@
+A new model which adds events so you can add custom fields, functions etc without having to re-extend.
+
+very useful for mixing plugins such as competitions & events where both need to add data to the content model.
