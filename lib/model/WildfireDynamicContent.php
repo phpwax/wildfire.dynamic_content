@@ -11,7 +11,7 @@ class WildfireDynamicContent extends WildfireContent{
   public function scope($scope){
     $this->asked_for_scope = $scope;
     WaxEvent::run("wildfire_dynamic_content.scope", $this);
-    parent::scope($scope);
+    return parent::scope($scope);
   }
   
   public function before_save(){
